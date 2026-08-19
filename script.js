@@ -12,7 +12,8 @@
   const closeOverview = document.getElementById('closeOverview');
   const fullscreenBtn = document.getElementById('fullscreenBtn');
   const keyHint = document.getElementById('keyHint');
-  const mobile = () => matchMedia('(max-width: 820px)').matches;
+  const mobileQuery = matchMedia('(max-width: 820px)');
+  const mobile = () => mobileQuery.matches;
   let index = Math.max(0, slides.findIndex(s => `#${s.id}` === location.hash));
   if (index < 0) index = 0;
   let wheelLock = false;
@@ -37,9 +38,16 @@
   const overviewItems = [...overviewGrid.children];
 
   function render() {
-    if (!mobile()) {
+    if (mobile()) {
+      // Mobile is a vertical document-flow presentation. Every slide must be
+      // visible; IntersectionObserver only updates the current section label.
+      slides.forEach(s => s.classList.add('is-active'));
+      document.documentElement.classList.add('mobile-flow');
+    } else {
       slides.forEach((s, i) => s.classList.toggle('is-active', i === index));
+      document.documentElement.classList.remove('mobile-flow');
     }
+
     dots.forEach((d, i) => d.classList.toggle('is-active', i === index));
     overviewItems.forEach((d, i) => d.classList.toggle('is-active', i === index));
     counter.textContent = `${String(index + 1).padStart(2, '0')} / ${String(slides.length).padStart(2, '0')}`;
@@ -55,6 +63,7 @@
     if (mobile()) slides[index].scrollIntoView({ behavior: 'smooth', block: 'start' });
     render();
   }
+
   const next = () => go(index + 1);
   const prev = () => go(index - 1);
   nextBtn.addEventListener('click', next);
@@ -65,10 +74,12 @@
     overview.setAttribute('aria-hidden', 'false');
     overviewItems[index]?.focus();
   }
+
   function closeOverviewMode() {
     overview.classList.remove('is-open');
     overview.setAttribute('aria-hidden', 'true');
   }
+
   overviewBtn.addEventListener('click', () => overview.classList.contains('is-open') ? closeOverviewMode() : openOverviewMode());
   closeOverview.addEventListener('click', closeOverviewMode);
   overview.addEventListener('click', e => { if (e.target === overview) closeOverviewMode(); });
@@ -107,44 +118,88 @@
 
   let hintTimer = setTimeout(() => keyHint.style.opacity = '0', 6000);
   window.addEventListener('pointermove', () => {
-    keyHint.style.opacity = '1'; clearTimeout(hintTimer); hintTimer = setTimeout(() => keyHint.style.opacity = '0', 3000);
+    keyHint.style.opacity = '1';
+    clearTimeout(hintTimer);
+    hintTimer = setTimeout(() => keyHint.style.opacity = '0', 3000);
   }, { passive: true });
 
   // Hero canvas: lightweight evidence graph. Disabled automatically for reduced motion/mobile.
   const canvas = document.getElementById('heroCanvas');
   const ctx = canvas?.getContext('2d');
   let particles = [], raf = 0;
+
   function resizeCanvas() {
     if (!canvas || !ctx) return;
     const dpr = Math.min(devicePixelRatio || 1, 2);
-    canvas.width = innerWidth * dpr; canvas.height = innerHeight * dpr;
-    canvas.style.width = `${innerWidth}px`; canvas.style.height = `${innerHeight}px`;
-    ctx.setTransform(dpr,0,0,dpr,0,0);
+    canvas.width = innerWidth * dpr;
+    canvas.height = innerHeight * dpr;
+    canvas.style.width = `${innerWidth}px`;
+    canvas.style.height = `${innerHeight}px`;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     const count = Math.min(56, Math.max(24, Math.floor(innerWidth / 28)));
-    particles = Array.from({length: count}, () => ({x:Math.random()*innerWidth,y:Math.random()*innerHeight,vx:(Math.random()-.5)*.12,vy:(Math.random()-.5)*.12,r:Math.random()*1.5+.4}));
+    particles = Array.from({ length: count }, () => ({
+      x: Math.random() * innerWidth,
+      y: Math.random() * innerHeight,
+      vx: (Math.random() - .5) * .12,
+      vy: (Math.random() - .5) * .12,
+      r: Math.random() * 1.5 + .4
+    }));
   }
+
   function drawCanvas() {
     if (!ctx || mobile() || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    ctx.clearRect(0,0,innerWidth,innerHeight);
-    for (let i=0;i<particles.length;i++) {
-      const p=particles[i]; p.x+=p.vx;p.y+=p.vy;
-      if(p.x<0||p.x>innerWidth)p.vx*=-1;if(p.y<0||p.y>innerHeight)p.vy*=-1;
-      ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle='rgba(169,142,230,.35)';ctx.fill();
-      for(let j=i+1;j<particles.length;j++){
-        const q=particles[j],dx=p.x-q.x,dy=p.y-q.y,d=Math.hypot(dx,dy);
-        if(d<135){ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(q.x,q.y);ctx.strokeStyle=`rgba(127,86,217,${.10*(1-d/135)})`;ctx.stroke();}
+    ctx.clearRect(0, 0, innerWidth, innerHeight);
+    for (let i = 0; i < particles.length; i++) {
+      const p = particles[i];
+      p.x += p.vx;
+      p.y += p.vy;
+      if (p.x < 0 || p.x > innerWidth) p.vx *= -1;
+      if (p.y < 0 || p.y > innerHeight) p.vy *= -1;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(169,142,230,.35)';
+      ctx.fill();
+      for (let j = i + 1; j < particles.length; j++) {
+        const q = particles[j], dx = p.x - q.x, dy = p.y - q.y, d = Math.hypot(dx, dy);
+        if (d < 135) {
+          ctx.beginPath();
+          ctx.moveTo(p.x, p.y);
+          ctx.lineTo(q.x, q.y);
+          ctx.strokeStyle = `rgba(127,86,217,${.10 * (1 - d / 135)})`;
+          ctx.stroke();
+        }
       }
     }
-    raf=requestAnimationFrame(drawCanvas);
+    raf = requestAnimationFrame(drawCanvas);
   }
-  if (canvas) { resizeCanvas(); drawCanvas(); window.addEventListener('resize', () => { cancelAnimationFrame(raf); resizeCanvas(); drawCanvas(); }); }
 
-  if (mobile()) {
-    const observer = new IntersectionObserver(entries => {
-      const visible = entries.filter(e => e.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];
-      if (visible) { index = slides.indexOf(visible.target); render(); }
-    }, { threshold: [0.35,0.55,0.75] });
-    slides.forEach(s => observer.observe(s));
+  if (canvas) {
+    resizeCanvas();
+    drawCanvas();
+    window.addEventListener('resize', () => {
+      cancelAnimationFrame(raf);
+      resizeCanvas();
+      drawCanvas();
+    });
   }
+
+  const observer = new IntersectionObserver(entries => {
+    if (!mobile()) return;
+    const visible = entries
+      .filter(e => e.isIntersecting)
+      .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+    if (visible) {
+      index = slides.indexOf(visible.target);
+      render();
+    }
+  }, { threshold: [0.25, 0.45, 0.65] });
+
+  slides.forEach(s => observer.observe(s));
+
+  mobileQuery.addEventListener?.('change', () => {
+    render();
+    if (!mobile()) window.scrollTo({ top: 0, behavior: 'auto' });
+  });
+
   render();
 })();
