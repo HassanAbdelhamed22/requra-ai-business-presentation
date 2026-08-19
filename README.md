@@ -38,7 +38,7 @@ It is deliberately not a technical architecture deck and not a static PowerPoint
 - a public web experience hosted on Vercel,
 - a print-friendly presentation when needed.
 
-The visual system follows Requra's real product language: **Obsidian**, Requra **Violet**, restrained **Cyan**, evidence-oriented graphics, and real product screenshots.
+The visual system follows Requra's real product language: **Obsidian**, Requra **Violet**, restrained **Cyan**, evidence-oriented graphics, real product screenshots, and a deliberately varied slide rhythm.
 
 ## Production
 
@@ -55,6 +55,32 @@ The deck therefore follows this narrative:
 > **fragmented stakeholder knowledge → requirements intelligence → human review → evidence-backed delivery**
 
 The AI implementation supports the story; it does not replace the story.
+
+## Visual storytelling system
+
+The deck intentionally avoids repeating the same “headline + four cards” composition. Different ideas use different visual grammars so the audience can understand the concept before reading every sentence.
+
+The current visual layer includes:
+
+- **artifact anatomy** — source → requirement → story → acceptance criteria → delivery,
+- **real traceability-chain artwork** from the Requra AI pipeline documentation,
+- **generic AI vs Requra AI** trust comparison,
+- **e-business ecosystem network** around shared requirements context,
+- **qualitative STP market-fit map**,
+- **qualitative competitive-positioning 2×2**,
+- **SWOT strategy synthesis strip**,
+- **4Ps strategy orbit**,
+- **land → adopt → expand monetization path**,
+- **GTM funnel + proof/adoption narrative**,
+- **Business Model Canvas flow cue**,
+- **roadmap horizon timeline**,
+- real product screenshots with subtle evidence/product annotations.
+
+### Credibility rule
+
+The presentation does **not** invent percentages, market-size numbers, conversion rates or fake growth charts. Any non-measured business map is explicitly labeled as a **qualitative strategic hypothesis/comparison**.
+
+That distinction is intentional: visual storytelling should improve comprehension without manufacturing evidence.
 
 ## Presentation structure
 
@@ -146,6 +172,8 @@ The layout is explicitly designed for:
 
 The human-system slide received an important structural fix: **Engineering & QA is a real second grid row instead of an absolutely positioned card**, so it cannot collide with the explanatory caption on short displays.
 
+The newer visual diagrams also include dedicated short-height and mobile rules: orbit diagrams become readable stacked systems, 2×2 charts retain axis labels, the roadmap switches to a vertical horizon, and multi-column flows collapse without hiding their meaning.
+
 ## Brand system
 
 The presentation follows the Requra frontend design tokens:
@@ -171,9 +199,10 @@ The goal is to feel unmistakably Requra — not like a generic purple “AI pres
 │   └── part-3.html            # slides 13–17
 ├── styles/
 │   ├── part-1.css             # design system + core compositions
-│   ├── part-2.css             # product, AI and strategy visuals
+│   ├── part-2.css             # product, AI and strategy foundations
 │   ├── part-3.css             # navigation + mobile behavior
-│   └── part-4.css             # print + short-height responsive hardening
+│   ├── part-4.css             # print + short-height responsive hardening
+│   └── part-5.css             # visual storytelling charts + illustrative systems
 ├── assets/
 │   ├── requra-hero-dark.svg
 │   ├── traceability-chain.svg
