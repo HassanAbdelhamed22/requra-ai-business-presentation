@@ -1,0 +1,447 @@
+/* Mobile reliability + responsive visual composition.
+   Loaded last so the phone experience never depends on desktop slide-state animation. */
+
+@media (max-width: 820px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    overscroll-behavior-y: auto;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    position: relative;
+  }
+
+  .deck {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 100svh;
+  }
+
+  /* Critical fix: every mobile slide is document-flow content.
+     Reveal visibility must not depend on .is-active (desktop-only state). */
+  .slide {
+    position: relative !important;
+    inset: auto !important;
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 100svh;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    transform: none !important;
+    overflow: hidden;
+  }
+
+  .slide .reveal,
+  .slide .delay-2,
+  .slide .delay-3,
+  .slide.is-active .reveal {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .slide-inner {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 100svh;
+    height: auto !important;
+    padding-top: calc(78px + env(safe-area-inset-top));
+    padding-right: clamp(18px, 5vw, 28px);
+    padding-bottom: calc(58px + env(safe-area-inset-bottom));
+    padding-left: clamp(18px, 5vw, 28px);
+    justify-content: flex-start !important;
+  }
+
+  .chrome {
+    height: calc(58px + env(safe-area-inset-top));
+    padding-top: env(safe-area-inset-top);
+    padding-right: calc(15px + env(safe-area-inset-right));
+    padding-left: calc(15px + env(safe-area-inset-left));
+  }
+
+  .slide::after {
+    inset: 58px 0 0;
+    background-size: 52px 52px;
+    opacity: .72;
+  }
+
+  h1 {
+    font-size: clamp(2.65rem, 13.5vw, 4.7rem);
+    line-height: .95;
+  }
+
+  h2 {
+    font-size: clamp(2rem, 10vw, 3.65rem);
+    line-height: 1;
+  }
+
+  .lead,
+  .hero-lead {
+    font-size: clamp(.96rem, 4vw, 1.12rem);
+    line-height: 1.55;
+  }
+
+  .top-copy {
+    margin-bottom: 24px !important;
+  }
+
+  .hero-layout,
+  .two-col,
+  .product-proof-layout,
+  .ai-layout,
+  .visual-ai-layout,
+  .business-layout,
+  .close-layout,
+  .market-map-layout,
+  .gtm-layout {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 26px !important;
+  }
+
+  #s-01 .slide-inner {
+    justify-content: center !important;
+  }
+
+  #s-01 .hero-orbit {
+    width: min(74vw, 330px) !important;
+    margin: 0 auto 4px;
+  }
+
+  #s-01 .hero-copy {
+    text-align: center;
+  }
+
+  #s-01 .hero-meta-row {
+    justify-content: center;
+  }
+
+  /* Product screens */
+  .screen-stack {
+    width: 100%;
+    height: min(88vw, 470px) !important;
+    margin-top: 4px;
+  }
+
+  /* Artifact transformation */
+  .artifact-stage {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    min-height: 0 !important;
+    gap: 14px !important;
+  }
+
+  .artifact-thread {
+    min-height: 150px !important;
+  }
+
+  .artifact-thread-line {
+    top: 0;
+    bottom: 0;
+  }
+
+  .artifact-thread-label {
+    writing-mode: horizontal-tb !important;
+    transform: none !important;
+    right: auto !important;
+    left: 50%;
+    bottom: 5px;
+    translate: -50% 0;
+    white-space: nowrap;
+  }
+
+  .artifact-outcomes {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto !important;
+  }
+
+  .artifact-outcomes > .artifact-kicker,
+  .artifact-card.requirement,
+  .artifact-card.story,
+  .artifact-card.acceptance {
+    grid-column: 1 !important;
+    grid-row: auto !important;
+  }
+
+  .artifact-card.requirement {
+    min-height: 190px;
+  }
+
+  .artifact-output-strip {
+    grid-template-columns: 1fr !important;
+    gap: 4px !important;
+  }
+
+  /* AI trust comparison */
+  .trust-difference {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+  }
+
+  .trust-arrow {
+    transform: rotate(90deg);
+    height: 22px;
+    display: grid;
+    place-items: center;
+  }
+
+  .traceability-showcase {
+    width: 100%;
+    padding: 8px;
+  }
+
+  .traceability-showcase figcaption {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .traceability-showcase figcaption b {
+    max-width: none;
+    text-align: left;
+  }
+
+  /* E-business ecosystem becomes a readable card network on phones. */
+  .business-network {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 16px;
+    overflow: visible;
+  }
+
+  .network-ring,
+  .network-links {
+    display: none !important;
+  }
+
+  .network-core,
+  .network-node {
+    position: static !important;
+    inset: auto !important;
+    transform: none !important;
+    width: auto !important;
+  }
+
+  .network-core {
+    grid-column: 1 / -1;
+    width: 132px !important;
+    height: 132px;
+    margin: 2px auto 8px;
+  }
+
+  .network-node {
+    min-height: 108px;
+  }
+
+  .network-outcomes {
+    flex-wrap: wrap;
+    row-gap: 7px;
+    line-height: 1.4;
+  }
+
+  /* Market map */
+  .market-map-layout {
+    width: 100%;
+  }
+
+  .market-fit-panel,
+  .market-narrative {
+    width: 100%;
+  }
+
+  .market-fit-head,
+  .position-head {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .market-fit-map {
+    height: 250px !important;
+    margin: 14px 12px 28px 38px !important;
+  }
+
+  .market-point {
+    font-size: 6.5px;
+  }
+
+  /* Competitive positioning */
+  .matrix-wrap {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  .position-panel {
+    width: 100%;
+  }
+
+  .position-map {
+    min-height: 250px;
+  }
+
+  /* SWOT synthesis */
+  .swot-signal-bar {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+  }
+
+  .swot-signal-bar > i {
+    width: 1px !important;
+    height: 16px !important;
+    margin: 0 auto;
+  }
+
+  /* 4Ps orbit becomes an intentional stacked story instead of cramped absolute nodes. */
+  .marketing-orbit {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+    width: 100%;
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  .marketing-ring,
+  .marketing-links {
+    display: none !important;
+  }
+
+  .marketing-core,
+  .marketing-node {
+    position: static !important;
+    inset: auto !important;
+    transform: none !important;
+    width: auto !important;
+  }
+
+  .marketing-core {
+    width: 136px !important;
+    height: 136px;
+    margin: 0 auto 6px;
+  }
+
+  .marketing-node {
+    min-height: 142px;
+  }
+
+  .marketing-thesis {
+    width: 100%;
+  }
+
+  /* Business model + GTM */
+  .monetization-logic {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 7px !important;
+  }
+
+  .monetization-logic > i {
+    width: 1px !important;
+    height: 16px !important;
+    margin: 0 auto;
+  }
+
+  .gtm-layout {
+    width: 100%;
+  }
+
+  .gtm-proof-panel {
+    width: 100%;
+  }
+
+  .bmc-flow {
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 7px !important;
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  /* Roadmap */
+  .roadmap-horizon {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+    width: 100%;
+    height: auto !important;
+  }
+
+  .horizon-line {
+    display: none !important;
+  }
+
+  .horizon-step {
+    position: static !important;
+    inset: auto !important;
+    transform: none !important;
+    width: auto !important;
+    min-height: 150px;
+  }
+
+  .roadmap-rule {
+    flex-wrap: wrap;
+    row-gap: 8px;
+  }
+
+  .close-card {
+    min-height: 0 !important;
+  }
+}
+
+@media (max-width: 540px) {
+  .slide-inner {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+
+  .business-network {
+    grid-template-columns: 1fr;
+  }
+
+  .network-core {
+    grid-column: 1;
+  }
+
+  .network-node,
+  .marketing-node {
+    min-height: 0;
+  }
+
+  .market-fit-map,
+  .position-map {
+    transform: scale(.98);
+    transform-origin: center;
+  }
+
+  .matrix-row span {
+    word-break: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .traceability-showcase img {
+    min-height: 185px;
+    object-fit: contain;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) and (max-width: 820px) {
+  html {
+    scroll-behavior: auto;
+  }
+}
