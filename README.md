@@ -9,154 +9,185 @@
 </p>
 
 <p align="center">
-  <a href="https://requra-ai-business-presentation.vercel.app"><strong>Open the live presentation</strong></a>
+  <a href="https://requra-ai-business-presentation.vercel.app"><strong>Live Presentation</strong></a>
   &nbsp;·&nbsp;
-  <a href="https://requra-demo-rust.vercel.app/demo">Open Requra interactive demo</a>
+  <a href="https://requra-demo-rust.vercel.app/demo">Requra Product Demo</a>
   &nbsp;·&nbsp;
-  <a href="https://github.com/Requra/ai-pipeline">AI pipeline</a>
+  <a href="https://github.com/Requra/ai-pipeline">AI Pipeline</a>
   &nbsp;·&nbsp;
-  <a href="https://github.com/Requra/frontend">Product frontend</a>
+  <a href="https://github.com/Requra/frontend">Product Frontend</a>
+</p>
+
+<p align="center">
+  <img alt="Static HTML" src="https://img.shields.io/badge/runtime-static%20HTML-0B1020?style=flat-square" />
+  <img alt="Responsive" src="https://img.shields.io/badge/responsive-mobile%20%E2%86%94%20desktop-7F56D9?style=flat-square" />
+  <img alt="Vercel" src="https://img.shields.io/badge/deployed-Vercel-000000?style=flat-square&logo=vercel" />
+  <img alt="Requra" src="https://img.shields.io/badge/brand-Requra.AI-22C3D8?style=flat-square" />
 </p>
 
 ---
 
-## What this repository is
+## Overview
 
-This repository contains the responsive **Requra.AI business and product presentation** used to explain the product from a business-first perspective while staying grounded in the current Requra repositories.
+This repository contains the interactive **Requra.AI business and product presentation**. It explains Requra from a business-first perspective while keeping product claims grounded in the current Requra codebase.
 
-It is intentionally **not** a technical architecture deck and not a static PowerPoint export. It is an interactive HTML/CSS/JavaScript presentation designed to work as:
+It is deliberately not a technical architecture deck and not a static PowerPoint export. The same source works as:
 
-- a live full-screen presentation on desktop,
-- a responsive vertical story on tablets and phones,
-- a shareable Vercel-hosted web experience,
-- a printable presentation when needed.
+- a cinematic full-screen desktop presentation,
+- a responsive vertical narrative on tablets and phones,
+- a public web experience hosted on Vercel,
+- a print-friendly presentation when needed.
 
-The deck uses Requra's real brand direction and product evidence: Obsidian surfaces, Requra Violet, Cyan accents, actual product screenshots, and the evidence/traceability concepts implemented by the AI pipeline.
+The visual system follows Requra's real product language: **Obsidian**, Requra **Violet**, restrained **Cyan**, evidence-oriented graphics, and real product screenshots.
 
-## Live deployment
+## Production
 
-**Production:** https://requra-ai-business-presentation.vercel.app
+**Live:** https://requra-ai-business-presentation.vercel.app
 
-The project is deployed as a static site on Vercel with clean URLs and no build step.
+The site is framework-free and deploys as static files with no application build step.
 
-## Presentation story
+## Why this presentation exists
 
-The deck is structured as a business narrative rather than a feature dump:
+Requra is strongest when it is explained as a solution to a business problem, not as a list of AI technologies.
 
-1. **Vision** — what Requra changes
-2. **The problem** — fragmented project knowledge
-3. **Cost of misunderstanding** — ambiguity → wrong implementation → rework
-4. **Requra solution** — capture → understand → structure → validate → review → deliver
-5. **Human system** — Stakeholder ↔ Requra ↔ BA/PM → Engineering & QA
-6. **Product proof** — real Requra screens and implemented surfaces
-7. **Structured outputs** — requirements, stories, acceptance criteria, summaries, coverage and exports
-8. **Requra AI** — evidence-grounded intelligence rather than plausible prose
-9. **Why e-business** — collaboration, continuity, automation, traceability and scale
-10. **STP strategy** — segmentation, targeting and positioning
-11. **Competitive position** — manual workflow vs generic AI vs Requra
-12. **SWOT** — current strategic assessment
-13. **4Ps** — product, price, place and promotion
-14. **Business model** — proposed B2B SaaS direction
-15. **Go-to-market** — awareness → pilot → adoption → expansion
-16. **Business Model Canvas**
-17. **Roadmap & close** — current foundation and growth direction
+The deck therefore follows this narrative:
 
-## Current product vs proposed business strategy
+> **fragmented stakeholder knowledge → requirements intelligence → human review → evidence-backed delivery**
 
-The presentation uses a deliberate truth model:
+The AI implementation supports the story; it does not replace the story.
 
-- **Green / “CURRENT PRODUCT”** markers represent behavior supported by the current Requra codebase and repository documentation.
-- **Amber / “PROPOSED”** markers represent recommended business strategy such as packaging, monetization or future positioning. They are not presented as already-finalized product facts.
+## Presentation structure
 
-This separation is important: the current repositories establish product capabilities, but they do not establish a finalized commercial pricing model.
+| # | Section | Message |
+|---:|---|---|
+| 01 | Vision | Turn project context into requirements teams can trust |
+| 02 | Problem | Project knowledge rarely arrives as a clean backlog |
+| 03 | Cost | Ambiguity compounds into wrong implementation and rework |
+| 04 | Solution | Capture → Understand → Structure → Validate → Review → Deliver |
+| 05 | Human system | Stakeholder ↔ Requra ↔ BA/PM → Engineering & QA |
+| 06 | Product proof | Real implemented Requra product surfaces |
+| 07 | Outputs | Requirements, stories, AC, summaries, coverage and exports |
+| 08 | Requra AI | Evidence-grounded intelligence, not plausible prose |
+| 09 | E-business | Collaboration, continuity, automation, traceability and scale |
+| 10 | STP | Segmentation, targeting and positioning |
+| 11 | Competition | Manual workflow vs generic AI vs Requra |
+| 12 | SWOT | Strategic strengths, weaknesses, opportunities and threats |
+| 13 | 4Ps | B2B-oriented marketing mix |
+| 14 | Business model | Proposed B2B SaaS direction |
+| 15 | GTM | Awareness → pilot → adoption → expansion |
+| 16 | BMC | Full Business Model Canvas |
+| 17 | Roadmap | Build trust first, expand intelligence second |
+
+## Truth model: current vs proposed
+
+The presentation visibly separates **implemented product truth** from **business recommendations**:
+
+- **CURRENT PRODUCT** — supported by current Requra repositories and contracts.
+- **PROPOSED** — recommended commercial strategy such as packaging, pricing direction, GTM or future positioning.
+
+This prevents the deck from presenting an unfinalized pricing model or roadmap hypothesis as an existing feature.
 
 ## Requra AI concepts featured
 
-The deck keeps the AI explanation business-readable while reflecting the real pipeline:
+The AI section stays business-readable while reflecting the actual requirements pipeline:
 
-- multi-source requirements extraction,
-- PDF / DOCX / text processing,
+- PDF / DOCX / text ingestion,
 - audio transcription when configured,
-- requirement deduplication,
-- BM25 retrieval,
+- structured requirement extraction,
+- duplicate merging,
+- BM25 evidence retrieval,
 - optional hybrid/vector retrieval,
 - evidence quote grounding,
-- classification,
+- requirement classification,
 - user-story and acceptance-criteria generation,
 - quality validation and bounded repair,
 - requirement-to-story coverage,
-- traceable source references,
-- executive summaries and delivery exports.
+- source references and traceability,
+- structured summaries,
+- Excel-ready / Jira-compatible outputs.
 
-See [`assets/traceability-chain.svg`](./assets/traceability-chain.svg) for the evidence chain used by the AI-service documentation.
+The underlying AI service uses a 15-node LangGraph workflow; the deck explains the business consequence rather than forcing the audience through every implementation node.
 
-## Controls
+<p align="center">
+  <img src="./assets/traceability-chain.svg" alt="Requra.AI traceability chain from source evidence to delivery artifacts" width="100%" />
+</p>
+
+## Interaction
 
 ### Desktop
 
 | Input | Action |
-| --- | --- |
+|---|---|
 | `←` / `→` | Previous / next slide |
 | `Page Up` / `Page Down` | Previous / next slide |
+| `Space` | Next slide |
 | Mouse wheel | Navigate slides |
-| `O` | Toggle slide overview |
-| `F` | Toggle fullscreen |
-| `Home` | First slide |
-| `End` | Last slide |
+| `O` | Slide overview |
+| `F` | Fullscreen |
+| `Home` / `End` | First / last slide |
 
-### Mobile / tablet
+### Mobile and tablet
 
-Below the desktop presentation breakpoint, the deck becomes a **natural vertical narrative** instead of shrinking a 16:9 canvas. This prevents unreadable text and keeps cards, diagrams and product screens in normal document flow.
+Below the desktop breakpoint, the presentation becomes a **natural full-width vertical narrative** instead of shrinking a desktop slide canvas. This keeps type, product screens and business diagrams readable.
 
-The layout also respects `prefers-reduced-motion`.
+The experience also respects `prefers-reduced-motion`.
 
 ## Responsive hardening
 
-The current version includes a layout-system fix for short desktop screens. In particular, the **Engineering & QA** card in the human-system slide is part of the grid flow rather than absolutely positioned, so it cannot collide with the explanatory caption when viewport height is limited.
-
-The presentation is designed for:
+The layout is explicitly designed for:
 
 - short laptop viewports,
-- standard 16:9 desktop displays,
+- standard 16:9 displays,
 - ultrawide monitors,
 - tablets,
 - modern mobile devices,
-- keyboard navigation and touch/scroll use.
+- keyboard navigation,
+- reduced-motion users.
+
+The human-system slide received an important structural fix: **Engineering & QA is a real second grid row instead of an absolutely positioned card**, so it cannot collide with the explanatory caption on short displays.
 
 ## Brand system
 
-The visual language follows the Requra frontend design tokens:
+The presentation follows the Requra frontend design tokens:
 
 | Token | Value |
-| --- | --- |
+|---|---|
 | Obsidian | `#030014` |
 | Primary Violet | `#7F56D9` |
 | Cyan Accent | `#22C3D8` |
 | Typeface | Inter / system sans fallback |
 
-The deck intentionally avoids a generic “AI purple template” look. Violet and cyan are used as Requra signals inside an Obsidian product environment.
+The goal is to feel unmistakably Requra — not like a generic purple “AI presentation” template.
 
 ## Repository structure
 
 ```text
 .
-├── index.html
-├── styles.css
-├── script.js
+├── index.html                 # shell, metadata and presentation chrome
+├── script.js                  # navigation, overview, fullscreen, canvas motion
+├── slides/
+│   ├── part-1.html            # slides 01–06
+│   ├── part-2.html            # slides 07–12
+│   └── part-3.html            # slides 13–17
+├── styles/
+│   ├── part-1.css             # design system + core compositions
+│   ├── part-2.css             # product, AI and strategy visuals
+│   ├── part-3.css             # navigation + mobile behavior
+│   └── part-4.css             # print + short-height responsive hardening
+├── assets/
+│   ├── requra-hero-dark.svg
+│   ├── traceability-chain.svg
+│   └── ASSET_SOURCES.md
 ├── vercel.json
 ├── .gitignore
-├── README.md
-└── assets/
-    ├── requra-hero-dark.svg
-    ├── traceability-chain.svg
-    └── ASSET_SOURCES.md
+└── README.md
 ```
 
-`index.html`, `styles.css`, and `script.js` are intentionally framework-free so the deck opens directly in a browser and deploys as a static site with effectively zero build overhead.
+The source is intentionally split into small static modules instead of one generated HTML file. That makes individual slides and responsive rules easy to review and edit on GitHub while keeping deployment effectively zero-overhead.
 
 ## Run locally
 
-Clone the repository and serve the directory with any static server:
+Because the shell fetches the slide fragments, serve the repository over HTTP rather than opening `index.html` via `file://`:
 
 ```bash
 git clone https://github.com/shawky2002020/requra-ai-business-presentation.git
@@ -164,38 +195,68 @@ cd requra-ai-business-presentation
 python -m http.server 8080
 ```
 
-Then open `http://localhost:8080`.
+Then open:
 
-Opening `index.html` directly also works in modern browsers, although a local HTTP server is preferable for presentation testing.
+```text
+http://localhost:8080
+```
 
-## Product visual assets
+Any equivalent static server works.
 
-The real product screenshots and robot logo displayed in the presentation come from the public `Requra/frontend` repository and are pinned to the audited frontend commit instead of floating on `main`.
+## Deploy to Vercel
 
-Local SVG assets in this repository are copied from the public Requra AI-pipeline documentation for stable README/presentation-support usage. Source details are recorded in [`assets/ASSET_SOURCES.md`](./assets/ASSET_SOURCES.md).
+This repo requires no framework preset, install step or build command.
+
+With Vercel CLI:
+
+```bash
+vercel
+vercel --prod
+```
+
+To connect the local repository to an existing Vercel project:
+
+```bash
+vercel link
+vercel git connect
+```
+
+Production is currently served at **requra-ai-business-presentation.vercel.app**.
+
+## Product visuals and asset provenance
+
+Real Requra product screenshots and the robot logo are referenced from the public `Requra/frontend` repository and pinned to the audited frontend commit:
+
+```text
+db60a53ed2b3621a3a8bae4ac28c4563d7919814
+```
+
+This prevents presentation visuals from silently changing when the upstream `main` branch changes.
+
+Requra AI documentation SVGs used by this repository are vendored locally for stable rendering. Full provenance is documented in [`assets/ASSET_SOURCES.md`](./assets/ASSET_SOURCES.md).
 
 ## Source-of-truth policy
 
-Business/product claims in the presentation were reviewed against:
+Product claims were reviewed against:
 
 - [`Requra/frontend`](https://github.com/Requra/frontend)
 - [`Requra/ai-pipeline`](https://github.com/Requra/ai-pipeline)
 
-The older proposal/MVP documents were treated as historical product intent only when they conflicted with current implementation.
+Older proposal/MVP material is treated as historical product intent when it conflicts with current implementation.
 
-## Tech
+## Technology
 
-- Semantic HTML5
-- Modern CSS (Grid, Flexbox, fluid sizing, media queries)
-- Vanilla JavaScript
-- Canvas hero animation
-- CSS transitions / reveal choreography
-- Vercel static hosting
+- semantic HTML5,
+- modern CSS Grid / Flexbox / fluid sizing,
+- vanilla JavaScript,
+- Canvas hero animation,
+- CSS reveal choreography,
+- static Vercel hosting.
 
-No framework or runtime dependency is required.
+There are **no runtime package dependencies**.
 
 ## Credits
 
-Presentation implementation and business-story adaptation for **Requra.AI**.
+Built for **Requra.AI** as a business-first product narrative with evidence-backed product claims and the Requra visual system.
 
-Requra product visuals and AI documentation assets remain sourced from the Requra project repositories noted above.
+Requra product visuals and AI documentation assets remain attributed to the Requra repositories listed above.
