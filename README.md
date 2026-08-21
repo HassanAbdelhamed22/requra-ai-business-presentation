@@ -93,16 +93,19 @@ That distinction is intentional: visual storytelling should improve comprehensio
 | 05 | Human system | Stakeholder ↔ Requra ↔ BA/PM → Engineering & QA |
 | 06 | Product proof | Real implemented Requra product surfaces |
 | 07 | Outputs | Requirements, stories, AC, summaries, coverage and exports |
-| 08 | Requra AI | Evidence-grounded intelligence, not plausible prose |
-| 09 | E-business | Collaboration, continuity, automation, traceability and scale |
-| 10 | STP | Segmentation, targeting and positioning |
-| 11 | Competition | Manual workflow vs generic AI vs Requra |
-| 12 | SWOT | Strategic strengths, weaknesses, opportunities and threats |
-| 13 | 4Ps | B2B-oriented marketing mix |
-| 14 | Business model | Proposed B2B SaaS direction |
-| 15 | GTM | Awareness → pilot → adoption → expansion |
-| 16 | BMC | Full Business Model Canvas |
-| 17 | Roadmap | Build trust first, expand intelligence second |
+| 08 | Architecture | Decoupled, asynchronous, and production-ready system design |
+| 09 | Collaboration | Curation, public stakeholder review, and PM approval flow |
+| 10 | Requra AI | Evidence-grounded intelligence, not plausible prose (Logical Graph) |
+| 11 | Conflict Detection | Cosine similarity & logical overrides to catch contradictions |
+| 12 | E-business | Collaboration, continuity, automation, traceability and scale |
+| 13 | STP | Segmentation, targeting and positioning |
+| 14 | Competition | Manual workflow vs generic AI vs Requra |
+| 15 | SWOT | Strategic strengths, weaknesses, opportunities and threats |
+| 16 | 4Ps | B2B-oriented marketing mix |
+| 17 | Business model | Proposed B2B SaaS direction |
+| 18 | GTM | Awareness → pilot → adoption → expansion |
+| 19 | BMC | Full Business Model Canvas |
+| 20 | Roadmap | Build trust first, expand intelligence second |
 
 ## Truth model: current vs proposed
 
