@@ -89,23 +89,24 @@ That distinction is intentional: visual storytelling should improve comprehensio
 | 01 | Vision | Turn project context into requirements teams can trust |
 | 02 | Problem | Project knowledge rarely arrives as a clean backlog |
 | 03 | Cost | Ambiguity compounds into wrong implementation and rework |
-| 04 | Solution | Capture → Understand → Structure → Validate → Review → Deliver |
-| 05 | Human system | Stakeholder ↔ Requra ↔ BA/PM → Engineering & QA |
-| 06 | Product proof | Real implemented Requra product surfaces |
-| 07 | Outputs | Requirements, stories, AC, summaries, coverage and exports |
-| 08 | Architecture | Decoupled, asynchronous, and production-ready system design |
-| 09 | Collaboration | Curation, public stakeholder review, and PM approval flow |
-| 10 | Requra AI | Evidence-grounded intelligence, not plausible prose (Logical Graph) |
-| 11 | Conflict Detection | Cosine similarity & logical overrides to catch contradictions |
-| 12 | E-business | Collaboration, continuity, automation, traceability and scale |
-| 13 | STP | Segmentation, targeting and positioning |
-| 14 | Competition | Manual workflow vs generic AI vs Requra |
-| 15 | SWOT | Strategic strengths, weaknesses, opportunities and threats |
-| 16 | 4Ps | B2B-oriented marketing mix |
+| 04 | Why Now | Timing & opportunity: distributed teams, unstructured inputs, AI inflection |
+| 05 | Solution | Capture → Understand → Structure → Validate → Review → Deliver |
+| 06 | Human system | Stakeholder ↔ Requra ↔ BA/PM → Engineering & QA |
+| 07 | Product proof | Real implemented Requra product surfaces |
+| 08 | Outputs | Requirements, stories, AC, summaries, coverage and exports |
+| 09 | Architecture | Async processing keeps heavy AI workloads off request path |
+| 10 | End-to-End Story | Multi-source context to Jira & ClickUp delivery story |
+| 11 | Requra AI | Evidence-grounded intelligence, not plausible prose (Logical Graph) |
+| 12 | Conflict Detection | Cosine similarity & logical overrides to catch contradictions |
+| 13 | E-business | Collaboration, continuity, automation, traceability and scale |
+| 14 | STP | Segmentation, targeting and positioning |
+| 15 | Competition | Manual workflow vs generic AI vs Requra |
+| 16 | Business Strategy | Coherent SWOT, Marketing Mix, and Canvas details |
 | 17 | Business model | Proposed B2B SaaS direction |
 | 18 | GTM | Awareness → pilot → adoption → expansion |
 | 19 | BMC | Full Business Model Canvas |
 | 20 | Roadmap | Build trust first, expand intelligence second |
+
 
 ## Truth model: current vs proposed
 
