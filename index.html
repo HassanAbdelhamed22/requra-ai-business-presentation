@@ -152,102 +152,112 @@
         <div class="matrix" style="background: rgba(255,255,255,.015); border: 1px solid rgba(255,255,255,.08); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column;">
           
           <!-- Header Row -->
-          <div class="matrix-row head" style="display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr 1fr 1.15fr; align-items: stretch; min-height: 38px; border-bottom: 1px solid rgba(255,255,255,.08); background: rgba(255,255,255,.03);">
+          <div class="matrix-row head" style="display: grid; grid-template-columns: 1.6fr 0.9fr 0.9fr 0.9fr 0.9fr 0.9fr 1.15fr; align-items: stretch; min-height: 38px; border-bottom: 1px solid rgba(255,255,255,.08); background: rgba(255,255,255,.03);">
             <span style="display: flex; align-items: center; padding-left: 12px; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: #9f98ad; font-weight: bold; text-align: left;">Capability</span>
             <span style="display: flex; align-items: center; justify-content: center; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: #9f98ad; font-weight: bold; text-align: center; padding: 0 4px; line-height: 1.2;">Generic AI</span>
             <span style="display: flex; align-items: center; justify-content: center; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: #9f98ad; font-weight: bold; text-align: center; padding: 0 4px; line-height: 1.2;">Storywise</span>
             <span style="display: flex; align-items: center; justify-content: center; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: #9f98ad; font-weight: bold; text-align: center; padding: 0 4px; line-height: 1.2;">Jama Connect</span>
             <span style="display: flex; align-items: center; justify-content: center; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: #9f98ad; font-weight: bold; text-align: center; padding: 0 4px; line-height: 1.2;">Productboard</span>
+            <span style="display: flex; align-items: center; justify-content: center; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: #9f98ad; font-weight: bold; text-align: center; padding: 0 4px; line-height: 1.2;">ClickUp</span>
             <span style="display: flex; align-items: center; justify-content: center; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--cyan); font-weight: bold; text-align: center; background: rgba(34,195,216,0.08); border-left: 1px solid rgba(34,195,216,0.2); border-right: 1px solid rgba(34,195,216,0.2); padding: 0 4px;">Requra</span>
           </div>
 
           <!-- Row 1: Native meeting + transcription workflow -->
-          <div class="matrix-row" style="display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr 1fr 1.15fr; align-items: stretch; min-height: 34px; border-bottom: 1px solid rgba(255,255,255,.05);">
+          <div class="matrix-row" style="display: grid; grid-template-columns: 1.6fr 0.9fr 0.9fr 0.9fr 0.9fr 0.9fr 1.15fr; align-items: stretch; min-height: 34px; border-bottom: 1px solid rgba(255,255,255,.05);">
             <span style="display: flex; align-items: center; padding-left: 12px; font-size: 12px; color: #c2bccd; text-align: left;">Native meeting + transcription workflow</span>
             <span style="display: flex; align-items: center; justify-content: center; color: #ffcc00; font-size: 14px;">●</span>
             <span style="display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.15);">—</span>
             <span style="display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.15);">—</span>
             <span style="display: flex; align-items: center; justify-content: center; color: #ffcc00; font-size: 14px;">●</span>
+            <span style="display: flex; align-items: center; justify-content: center; color: var(--cyan); font-size: 14px;">●</span>
             <span style="display: flex; align-items: center; justify-content: center; color: var(--cyan); font-size: 14px; background: rgba(34,195,216,0.04); border-left: 1px solid rgba(34,195,216,0.15); border-right: 1px solid rgba(34,195,216,0.15);">●</span>
           </div>
 
           <!-- Row 2: Multi-source project context -->
-          <div class="matrix-row" style="display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr 1fr 1.15fr; align-items: stretch; min-height: 34px; border-bottom: 1px solid rgba(255,255,255,.05);">
+          <div class="matrix-row" style="display: grid; grid-template-columns: 1.6fr 0.9fr 0.9fr 0.9fr 0.9fr 0.9fr 1.15fr; align-items: stretch; min-height: 34px; border-bottom: 1px solid rgba(255,255,255,.05);">
             <span style="display: flex; align-items: center; padding-left: 12px; font-size: 12px; color: #c2bccd; text-align: left;">Multi-source project context</span>
             <span style="display: flex; align-items: center; justify-content: center; color: var(--cyan); font-size: 14px;">●</span>
             <span style="display: flex; align-items: center; justify-content: center; color: var(--cyan); font-size: 14px;">●</span>
             <span style="display: flex; align-items: center; justify-content: center; color: #ffcc00; font-size: 14px;">●</span>
             <span style="display: flex; align-items: center; justify-content: center; color: var(--cyan); font-size: 14px;">●</span>
+            <span style="display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.15);">—</span>
             <span style="display: flex; align-items: center; justify-content: center; color: var(--cyan); font-size: 14px; background: rgba(34,195,216,0.04); border-left: 1px solid rgba(34,195,216,0.15); border-right: 1px solid rgba(34,195,216,0.15);">●</span>
           </div>
 
           <!-- Row 3: AI requirements / stories / AC -->
-          <div class="matrix-row" style="display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr 1fr 1.15fr; align-items: stretch; min-height: 34px; border-bottom: 1px solid rgba(255,255,255,.05);">
+          <div class="matrix-row" style="display: grid; grid-template-columns: 1.6fr 0.9fr 0.9fr 0.9fr 0.9fr 0.9fr 1.15fr; align-items: stretch; min-height: 34px; border-bottom: 1px solid rgba(255,255,255,.05);">
             <span style="display: flex; align-items: center; padding-left: 12px; font-size: 12px; color: #c2bccd; text-align: left;">AI requirements / stories / AC</span>
             <span style="display: flex; align-items: center; justify-content: center; color: var(--cyan); font-size: 14px;">●</span>
             <span style="display: flex; align-items: center; justify-content: center; color: var(--cyan); font-size: 14px;">●</span>
             <span style="display: flex; align-items: center; justify-content: center; color: var(--cyan); font-size: 14px;">●</span>
             <span style="display: flex; align-items: center; justify-content: center; color: var(--cyan); font-size: 14px;">●</span>
+            <span style="display: flex; align-items: center; justify-content: center; color: #ffcc00; font-size: 14px;">●</span>
             <span style="display: flex; align-items: center; justify-content: center; color: var(--cyan); font-size: 14px; background: rgba(34,195,216,0.04); border-left: 1px solid rgba(34,195,216,0.15); border-right: 1px solid rgba(34,195,216,0.15);">●</span>
           </div>
 
           <!-- Row 4: Source-grounded traceability -->
-          <div class="matrix-row" style="display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr 1fr 1.15fr; align-items: stretch; min-height: 34px; border-bottom: 1px solid rgba(255,255,255,.05);">
+          <div class="matrix-row" style="display: grid; grid-template-columns: 1.6fr 0.9fr 0.9fr 0.9fr 0.9fr 0.9fr 1.15fr; align-items: stretch; min-height: 34px; border-bottom: 1px solid rgba(255,255,255,.05);">
             <span style="display: flex; align-items: center; padding-left: 12px; font-size: 12px; color: #c2bccd; text-align: left;">Source-grounded traceability</span>
             <span style="display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.15);">—</span>
             <span style="display: flex; align-items: center; justify-content: center; color: var(--cyan); font-size: 14px;">●</span>
             <span style="display: flex; align-items: center; justify-content: center; color: var(--cyan); font-size: 14px;">●</span>
             <span style="display: flex; align-items: center; justify-content: center; color: var(--cyan); font-size: 14px;">●</span>
+            <span style="display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.15);">—</span>
             <span style="display: flex; align-items: center; justify-content: center; color: var(--cyan); font-size: 14px; background: rgba(34,195,216,0.04); border-left: 1px solid rgba(34,195,216,0.15); border-right: 1px solid rgba(34,195,216,0.15);">●</span>
           </div>
 
           <!-- Row 5: Conflict / quality analysis -->
-          <div class="matrix-row" style="display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr 1fr 1.15fr; align-items: stretch; min-height: 34px; border-bottom: 1px solid rgba(255,255,255,.05);">
+          <div class="matrix-row" style="display: grid; grid-template-columns: 1.6fr 0.9fr 0.9fr 0.9fr 0.9fr 0.9fr 1.15fr; align-items: stretch; min-height: 34px; border-bottom: 1px solid rgba(255,255,255,.05);">
             <span style="display: flex; align-items: center; padding-left: 12px; font-size: 12px; color: #c2bccd; text-align: left;">Conflict / quality analysis</span>
             <span style="display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.15);">—</span>
             <span style="display: flex; align-items: center; justify-content: center; color: var(--cyan); font-size: 14px;">●</span>
             <span style="display: flex; align-items: center; justify-content: center; color: var(--cyan); font-size: 14px;">●</span>
             <span style="display: flex; align-items: center; justify-content: center; color: #ffcc00; font-size: 14px;">●</span>
+            <span style="display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.15);">—</span>
             <span style="display: flex; align-items: center; justify-content: center; color: var(--cyan); font-size: 14px; background: rgba(34,195,216,0.04); border-left: 1px solid rgba(34,195,216,0.15); border-right: 1px solid rgba(34,195,216,0.15);">●</span>
           </div>
 
           <!-- Row 6: Stakeholder review & approval -->
-          <div class="matrix-row" style="display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr 1fr 1.15fr; align-items: stretch; min-height: 34px; border-bottom: 1px solid rgba(255,255,255,.05);">
+          <div class="matrix-row" style="display: grid; grid-template-columns: 1.6fr 0.9fr 0.9fr 0.9fr 0.9fr 0.9fr 1.15fr; align-items: stretch; min-height: 34px; border-bottom: 1px solid rgba(255,255,255,.05);">
             <span style="display: flex; align-items: center; padding-left: 12px; font-size: 12px; color: #c2bccd; text-align: left;">Stakeholder review &amp; approval</span>
             <span style="display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.15);">—</span>
             <span style="display: flex; align-items: center; justify-content: center; color: var(--cyan); font-size: 14px;">●</span>
             <span style="display: flex; align-items: center; justify-content: center; color: var(--cyan); font-size: 14px;">●</span>
             <span style="display: flex; align-items: center; justify-content: center; color: var(--cyan); font-size: 14px;">●</span>
+            <span style="display: flex; align-items: center; justify-content: center; color: #ffcc00; font-size: 14px;">●</span>
             <span style="display: flex; align-items: center; justify-content: center; color: var(--cyan); font-size: 14px; background: rgba(34,195,216,0.04); border-left: 1px solid rgba(34,195,216,0.15); border-right: 1px solid rgba(34,195,216,0.15);">●</span>
           </div>
 
           <!-- Row 7: Approval-controlled delivery workflow -->
-          <div class="matrix-row" style="display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr 1fr 1.15fr; align-items: stretch; min-height: 34px; border-bottom: 1px solid rgba(255,255,255,.05);">
+          <div class="matrix-row" style="display: grid; grid-template-columns: 1.6fr 0.9fr 0.9fr 0.9fr 0.9fr 0.9fr 1.15fr; align-items: stretch; min-height: 34px; border-bottom: 1px solid rgba(255,255,255,.05);">
             <span style="display: flex; align-items: center; padding-left: 12px; font-size: 12px; color: #c2bccd; text-align: left;">Approval-controlled delivery workflow</span>
             <span style="display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.15);">—</span>
             <span style="display: flex; align-items: center; justify-content: center; color: #ffcc00; font-size: 14px;">●</span>
             <span style="display: flex; align-items: center; justify-content: center; color: var(--cyan); font-size: 14px;">●</span>
             <span style="display: flex; align-items: center; justify-content: center; color: var(--cyan); font-size: 14px;">●</span>
+            <span style="display: flex; align-items: center; justify-content: center; color: #ffcc00; font-size: 14px;">●</span>
             <span style="display: flex; align-items: center; justify-content: center; color: var(--cyan); font-size: 14px; background: rgba(34,195,216,0.04); border-left: 1px solid rgba(34,195,216,0.15); border-right: 1px solid rgba(34,195,216,0.15);">●</span>
           </div>
 
           <!-- Row 8: Direct ClickUp delivery -->
-          <div class="matrix-row" style="display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr 1fr 1.15fr; align-items: stretch; min-height: 34px; border-bottom: 1px solid rgba(255,255,255,.05);">
+          <div class="matrix-row" style="display: grid; grid-template-columns: 1.6fr 0.9fr 0.9fr 0.9fr 0.9fr 0.9fr 1.15fr; align-items: stretch; min-height: 34px; border-bottom: 1px solid rgba(255,255,255,.05);">
             <span style="display: flex; align-items: center; padding-left: 12px; font-size: 12px; color: #c2bccd; text-align: left;">Direct ClickUp delivery</span>
             <span style="display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.15);">—</span>
             <span style="display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.15);">—</span>
             <span style="display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.15);">—</span>
             <span style="display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.15);">—</span>
+            <span style="display: flex; align-items: center; justify-content: center; color: var(--cyan); font-size: 14px;">●</span>
             <span style="display: flex; align-items: center; justify-content: center; color: var(--cyan); font-size: 14px; background: rgba(34,195,216,0.04); border-left: 1px solid rgba(34,195,216,0.15); border-right: 1px solid rgba(34,195,216,0.15);">●</span>
           </div>
 
-          <!-- Row 9: Jira delivery / integration -->
-          <div class="matrix-row" style="display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr 1fr 1.15fr; align-items: stretch; min-height: 34px; border-bottom: 0;">
-            <span style="display: flex; align-items: center; padding-left: 12px; font-size: 12px; color: #c2bccd; text-align: left;">Jira delivery / integration</span>
+          <!-- Row 9: ClickUp & Jira delivery integration -->
+          <div class="matrix-row" style="display: grid; grid-template-columns: 1.6fr 0.9fr 0.9fr 0.9fr 0.9fr 0.9fr 1.15fr; align-items: stretch; min-height: 34px; border-bottom: 0;">
+            <span style="display: flex; align-items: center; padding-left: 12px; font-size: 12px; color: #c2bccd; text-align: left;">ClickUp &amp; Jira delivery integration</span>
             <span style="display: flex; align-items: center; justify-content: center; color: #ffcc00; font-size: 14px;">●</span>
             <span style="display: flex; align-items: center; justify-content: center; color: var(--cyan); font-size: 14px;">●</span>
             <span style="display: flex; align-items: center; justify-content: center; color: var(--cyan); font-size: 14px;">●</span>
             <span style="display: flex; align-items: center; justify-content: center; color: var(--cyan); font-size: 14px;">●</span>
+            <span style="display: flex; align-items: center; justify-content: center; color: #ffcc00; font-size: 14px;">●</span>
             <span style="display: flex; align-items: center; justify-content: center; color: var(--cyan); font-size: 14px; background: rgba(34,195,216,0.04); border-left: 1px solid rgba(34,195,216,0.15); border-right: 1px solid rgba(34,195,216,0.15);">●</span>
           </div>
 
